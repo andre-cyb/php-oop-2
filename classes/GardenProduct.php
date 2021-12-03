@@ -1,10 +1,11 @@
 <?php
 
-
 class GardenProd extends Product{
 
     public $item = [
         "color"=> "",
+        "size"=> "",
+        "material"=>""
         
     ];
 
@@ -13,22 +14,20 @@ class GardenProd extends Product{
         
     }
     public function getGproduct(){
-        return $this->item["title"]. "<br>".$this->item["price"]. "<br>".$this->item["description"]. "<br>". $this->item["color"]. "<br>";
+        return $this->getProduct(). $this->item["color"]. "<br>". $this->item["size"]. "<br>". $this->item["material"]. "<br>";
     }
 
     public function setGproduct($arrProd){
-        if(isset($arrProd["title"])){
-            $this->item["title"]= $arrProd["title"];
-        }
-        if(isset($arrProd["price"])){
-            $this->item["price"]= $arrProd["price"];
-        }
-        if(isset($arrProd["description"])){
-            $this->item["description"]= $arrProd["description"];
-        }
+        $this->setProduct($arrProd);
 
-        if(isset($arrProd["title"])){
+        if(isset($arrProd["color"])){
             $this->item["color"]= $arrProd["color"];
+        }
+        if(isset($arrProd["size"])){
+            $this->item["size"]= $arrProd["size"];
+        }
+        if(isset($arrProd["material"])){
+            $this->item["material"]= $arrProd["material"];
         }
         
     }

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Product{
 
     public $item = [
@@ -35,6 +33,4 @@ class Product{
         
     }
 
-
-
-}
+}  
