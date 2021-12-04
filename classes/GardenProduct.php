@@ -10,15 +10,16 @@ class GardenProd extends Product{
     ];
 
     function __construct($arrProd){
-        return $this->setGproduct($arrProd);
+        parent::__construct($arrProd);
+        $this->setGproduct($arrProd);
         
     }
     public function getGproduct(){
-        return $this->getProduct(). $this->item["color"]. "<br>". $this->item["size"]. "<br>". $this->item["material"]. "<br>";
+        return $this->getProduct(). 
+        $this->item["color"]. "<br>". $this->item["size"]. "<br>". $this->item["material"]. "<br>";
     }
 
     public function setGproduct($arrProd){
-        $this->setProduct($arrProd);
 
         if(isset($arrProd["color"])){
             $this->item["color"]= $arrProd["color"];

@@ -41,6 +41,38 @@ $gardenProducts= [
         "size"=> "12 PACK",
         "material"=>"Acrylonitrile Butadiene Styrene"
     ],
+    [
+        "title"=> "Fence",
+        "price"=> 89.99,
+        "description"=> "Zippity Outdoor Products ZP19056 No Dig Roger Rabbit Garden Fence (3 Pack), White",
+        "color"=> "white",
+        "size"=> "10 mt",
+        "material"=>"Wood"
+    ],
+    [
+        "title"=> "Solar Lights",
+        "price"=> 31.99,
+        "description"=> " Solar Pathway Lights Outdoor, 12 Pack Solar Lights Outdoor,Solar Garden Lights,Solar Walkway Lights for Garden,",
+        "color"=> "black, warm light",
+        "size"=> "12 PACK",
+        "material"=>"Acrylonitrile Butadiene Styrene"
+    ],
+    [
+        "title"=> "Fence",
+        "price"=> 89.99,
+        "description"=> "Zippity Outdoor Products ZP19056 No Dig Roger Rabbit Garden Fence (3 Pack), White",
+        "color"=> "white",
+        "size"=> "10 mt",
+        "material"=>"Wood"
+    ],
+    [
+        "title"=> "Solar Lights",
+        "price"=> 31.99,
+        "description"=> " Solar Pathway Lights Outdoor, 12 Pack Solar Lights Outdoor,Solar Garden Lights,Solar Walkway Lights for Garden,",
+        "color"=> "black, warm light",
+        "size"=> "12 PACK",
+        "material"=>"Acrylonitrile Butadiene Styrene"
+    ],
     /* [
         "title"=> "Garden Hose",
         "price"=> 25.99,

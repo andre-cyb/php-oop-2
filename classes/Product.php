@@ -14,7 +14,10 @@ class Product{
         
     }
     public function getProduct(){
-        return $this->item["title"]. "<br>".$this->item["price"]. "<br>".$this->item["description"]. "<br>"/* .$this->img. "<br>" */;
+        return $this->item["title"]. "<br>".
+        "<p>".$this->item["price"]. "</p>"."<br>".
+        "<p>".$this->item["description"]."</p>". 
+        "<br>"/* .$this->img. "<br>" */;
     }
 
     public function setProduct($arrProd){
