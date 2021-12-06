@@ -16,6 +16,9 @@ class User{
         
     }
     public function getUser(){
+       /*  if(!$this->userData["prime"] === false){
+            
+        } */
         return $this->userData["name"]. "<br>".
         "<p>".$this->userData["lastName"]. "</p>"."<br>".
         "<p>".$this->userData["età"]."</p>"."<br>".

@@ -35,7 +35,7 @@ echo "</ul>"; */
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #3B3B3B; color: white">
     <header></header>
     <main>
         <div class="container">
@@ -48,7 +48,7 @@ echo "</ul>"; */
                     /*  echo "<li>".$gardenItem->getGproduct()."</li>"; */
                     
                 ?>
-                    <div class="card col-3  " style="width: 18rem;">
+                    <div class="card col-3  " style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
                             <?php echo $gardenItem->getGproduct() ?>
@@ -67,7 +67,7 @@ echo "</ul>"; */
                     /*  echo "<li>".$gardenItem->getGproduct()."</li>"; */
                     
                 ?>
-                    <div class="card col-3" style="width: 18rem;">
+                    <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
                             <?php echo $item->getProduct() ?>
@@ -77,7 +77,7 @@ echo "</ul>"; */
                 }
                 ?>
             </div>
-            <h1>Utenti non prime</h1>
+            <h1>Utenti</h1>
             <div class="row ">
 
                 <?php 
@@ -86,7 +86,7 @@ echo "</ul>"; */
                     /*  echo "<li>".$gardenItem->getGproduct()."</li>"; */
                     
                 ?>
-                    <div class="card col-3" style="width: 18rem;">
+                    <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
                             <?php echo $user->getUser() ?>
@@ -101,12 +101,14 @@ echo "</ul>"; */
 
                 <?php 
                     foreach ($users as $user) {
-                        $primeUser= new User($user);
+                        $primeUser= new PrimeUsers($user);
                     
                 ?>
-                    <div class="card col-3" style="width: 18rem;">
+                    <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <div class="card-body">
-                            <?php echo $primeUser->getUserPrime() ?>
+                            <?php 
+                                echo $primeUser->getUserPrime() 
+                            ?>
                         </div>
                     </div>
                 <?php

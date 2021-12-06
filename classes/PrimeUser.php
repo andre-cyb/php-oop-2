@@ -3,9 +3,9 @@
 class PrimeUsers extends User{
 
     public $primeUserData= [
-        "free-shipping"=> "true",
-        "one-day-delivery"=> "true",
-        "special-offer"=> "true",
+        "shipping"=> "Free Shipping",
+        "delivery"=> "One day delivery",
+        "special-offer"=> "Special Offer",
     ];
 
 
@@ -15,16 +15,20 @@ class PrimeUsers extends User{
         
     } */
     public function getUserPrime(){
-        return $this->getUser(). $this->primeUserData["free-shipping"]. "<br>".
-        "<p>".$this->primeUserData["one-day-delivery"]. "</p>"."<br>".
-        "<p>".$this->primeUserData["special-offer"]."</p>"."<br>";
+        if(!$this->userData["prime"] === true){
+            return parent::getUser(). $this->primeUserData["shipping"]. "<br>".
+            "<p>".$this->primeUserData["delivery"]. "</p>"."<br>".
+            "<p>".$this->primeUserData["special-offer"]."</p>"."<br>";
+        }
+
         
     }
 
-    /* public function setUserPrime($arrUser){
+
+    public function setUserPrime($arrUser){
         if($this->userData["prime"]){
             
-            if(isset($arrUser["free-shipping"])){
+            /* if(isset($arrUser["free-shipping"])){
                 $this->primeUserData["free-shipping"]= $arrUser["free-shipping"];
             }
             if(isset($arrUser["one-day-delivery"])){
@@ -33,8 +37,8 @@ class PrimeUsers extends User{
             if(isset($arrUser["special-offer"])){
                 $this->primeUserData["special-offer"]= $arrUser["special-offer"];
             }
-            
+             */
         }
         
-    } */
+    }
 }
