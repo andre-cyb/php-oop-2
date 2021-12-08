@@ -51,7 +51,9 @@ echo "</ul>"; */
                     <div class="card col-3  " style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <?php echo $gardenItem->getGproduct() ?>
+                            <?php echo "<h3>".$gardenItem->getTitle()."</h3>" ?>
+                            <?php echo "<small>". "$".$gardenItem->getPrice()."</small>" ?>
+                            <?php echo "<p>".$gardenItem->getDescription()."</p>" ?>
                         </div>
                     </div>
                 <?php
@@ -70,7 +72,9 @@ echo "</ul>"; */
                     <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <?php echo $item->getProduct() ?>
+                            <?php echo "<h3>".$item->getTitle()."</h3>" ?>
+                            <?php echo "<small>". "$".$item->getPrice()."</small>" ?>
+                            <?php echo "<p>".$item->getDescription()."</p>" ?>
                         </div>
                     </div>
                 <?php
@@ -89,30 +93,35 @@ echo "</ul>"; */
                     <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <?php echo $user->getUser() ?>
+                            <?php echo "<h3>".$user->getName()."</h3>" ?>
+                            <?php echo "<h4>".$user->getLastName()."</h4>" ?>
+                            <?php echo "<p>".$user->getAge()."</p>" ?>
+                            <?php echo "<small>".$user->getPrime()."</small>" ?>
+                            <?php echo "<small>".$user->getPaymentMethod("carta di credito")."</small>" ?>
                         </div>
                     </div>
                 <?php
                 }
                 ?>
             </div>
-            <h1>Utenti prime</h1>
+            <!-- <h1>Utenti prime</h1> -->
             <div class="row ">
 
                 <?php 
-                    foreach ($users as $user) {
-                        $primeUser= new PrimeUsers($user);
+                    /* foreach ($users as $user) {
+                        $primeUser= new PrimeUsers($user); */
                     
                 ?>
-                    <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
+                    <!-- <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <div class="card-body">
-                            <?php 
-                                echo $primeUser->getUserPrime() 
-                            ?>
+                            <?php echo "<small>".$user->getUserPrime()."</small>" ?>
+                            <?php echo "<small>".$user->getShipping()."</small>" ?>
+                            <?php echo "<small>".$user->getDelivery()."</small>" ?>
+                            <?php echo "<small>".$user->getSpecialOffer()."</small>" ?>
                         </div>
-                    </div>
+                    </div> -->
                 <?php
-                }
+                /* } */
                 ?>
             </div>
             

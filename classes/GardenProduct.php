@@ -2,12 +2,9 @@
 
 class GardenProd extends Product{
 
-    public $item = [
-        "color"=> "",
-        "size"=> "",
-        "material"=>""
-        
-    ];
+    public $color;
+    public $size;
+    public $material;
 
     function __construct($arrProd){
         parent::__construct($arrProd);
@@ -15,20 +12,20 @@ class GardenProd extends Product{
         
     }
     public function getGproduct(){
-        return $this->getProduct(). 
-        $this->item["color"]. "<br>". $this->item["size"]. "<br>". $this->item["material"]. "<br>";
+        return parent::getTitle().parent::getPrice().parent::getDescription(). 
+        $this->color. "<br>". $this->size. "<br>". $this->material. "<br>";
     }
 
     public function setGproduct($arrProd){
 
         if(isset($arrProd["color"])){
-            $this->item["color"]= $arrProd["color"];
+            $this->color= $arrProd["color"];
         }
         if(isset($arrProd["size"])){
-            $this->item["size"]= $arrProd["size"];
+            $this->size= $arrProd["size"];
         }
         if(isset($arrProd["material"])){
-            $this->item["material"]= $arrProd["material"];
+            $this->material= $arrProd["material"];
         }
         
     }

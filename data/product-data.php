@@ -18,7 +18,7 @@ $products= [
         cross-dimensional worlds, with their own universe next in line."
     ],
     [
-        "title"=> "RESPAWN RSP-110 Racing Style Gaming, Reclining Ergonomic Chair with Footrest, Green",
+        "title"=> "RESPAWN RSP-110 Racing Style Gaming",
         "price"=> 135.99,
         "description"=> " A racecar-style gaming chair that provides luxury and comfort, whether 
         it's used for intense gaming sessions and climbing to the top of the leaderboards, or long work days. "

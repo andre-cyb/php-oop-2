@@ -3,44 +3,75 @@
 
 class User{
 
-    public $userData=
-    [
-        "name"=> "",
-        "lastName"=> "",
-        "età"=> null,
-        "prime"=> null
-    ];
+    public $name;
+    public $lastName;
+    public $age;
+    public $prime;
+    public $paymentMethods= "";
+    
 
     function __construct($arrUser){
-        return $this->setUser($arrUser);
-        
+        return $this->setUser($arrUser); 
     }
-    public function getUser(){
-       /*  if(!$this->userData["prime"] === false){
-            
+
+    protected function getUser(){
+        return  $this->getName().
+                $this->getLastName().
+                $this->getAge().
+                $this->getPrime();
+                /* $this->getPaymentMethod($card); */
+    }
+
+
+
+    public function getName(){
+        return $this->name. "<br>";  
+    }
+    public function getLastName(){
+        return 
+        $this->lastName."<br>";  
+    }
+    public function getAge(){
+        return $this->age."<br>";  
+    }
+    public function getPrime(){
+    /*  if(!$this->userData["prime"] === false){    
         } */
-        return $this->userData["name"]. "<br>".
-        "<p>".$this->userData["lastName"]. "</p>"."<br>".
-        "<p>".$this->userData["età"]."</p>"."<br>".
-        "<p>".$this->userData["prime"]."</p>"."<br>";
+        return $this->prime."<br>";
     }
+    public function getPaymentMethod($card){
+        $this->paymentMethods= $card;
+
+        return $this->paymentMethods. "<br>";  
+    }
+
+
 
     public function setUser($arrUser){
         
         if(isset($arrUser["name"])){
-            $this->userData["name"]= $arrUser["name"];
+            $this->name= $arrUser["name"];
         }
         if(isset($arrUser["lastName"])){
-            $this->userData["lastName"]= $arrUser["lastName"];
+            $this->lastName= $arrUser["lastName"];
         }
-        if(isset($arrUser["età"])){
-            $this->userData["età"]= $arrUser["età"];
+        if(isset($arrUser["age"])){
+            $this->age= $arrUser["age"];
         }
         if(!$arrUser["prime"]){
-            $this->userData["prime"]= "non utente prime";
+            $this->prime= "non utente prime";
         }
         
     }
+   /*  public function setPaymentMethod($card){
+        $this->paymentMethods= $card;
+    
+    } */
+
+
+    /* public function addPaymentMethod($card){
+        $this->paymentMethods= $card;
+    } */
 
     
 
