@@ -1,14 +1,20 @@
 <?php
 
+include_once __DIR__ . "/../traits/PrimeServices.php";
+
+
 
 class User{
 
-    public $name;
-    public $lastName;
-    public $age;
-    public $prime;
-    public $paymentMethods= "";
+    protected $name;
+    protected $lastName;
+    protected $age;
+    protected $prime;
+    protected $paymentMethods= "";
     
+
+    use PrimeServices;
+
 
     function __construct($arrUser){
         return $this->setUser($arrUser); 
@@ -35,8 +41,6 @@ class User{
         return $this->age."<br>";  
     }
     public function getPrime(){
-    /*  if(!$this->userData["prime"] === false){    
-        } */
         return $this->prime."<br>";
     }
     public function getPaymentMethod($card){
@@ -55,11 +59,23 @@ class User{
         if(isset($arrUser["lastName"])){
             $this->lastName= $arrUser["lastName"];
         }
-        if(isset($arrUser["age"])){
-            $this->age= $arrUser["age"];
+
+        // try catch error intercettato
+        try {
+            if(!is_numeric($arrUser["age"])){
+                throw new Exception("L'età inserita non è un numero");  
+            }else{
+                $this->age= $arrUser["age"];
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
+
+
         if(!$arrUser["prime"]){
             $this->prime= "non utente prime";
+        }else{
+            return $this->getPrimePrivilege();
         }
         
     }

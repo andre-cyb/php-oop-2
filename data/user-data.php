@@ -4,7 +4,7 @@ $users= [
     [
         "name"=> "Mario",
         "lastName"=> "Rossi",
-        "age"=> 45,
+        "age"=> "ciao",
         "prime"=> false
 
     ],

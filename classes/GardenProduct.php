@@ -2,9 +2,9 @@
 
 class GardenProd extends Product{
 
-    public $color;
-    public $size;
-    public $material;
+    protected $color;
+    protected $size;
+    protected $material;
 
     function __construct($arrProd){
         parent::__construct($arrProd);
@@ -16,7 +16,7 @@ class GardenProd extends Product{
         $this->color. "<br>". $this->size. "<br>". $this->material. "<br>";
     }
 
-    public function setGproduct($arrProd){
+    protected function setGproduct($arrProd){
 
         if(isset($arrProd["color"])){
             $this->color= $arrProd["color"];

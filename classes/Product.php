@@ -2,9 +2,9 @@
 
 class Product{
 
-    public $title;
-    public $price;
-    public $description;
+    protected $title;
+    protected $price;
+    protected $description;
 
 
     function __construct($arrProd){
@@ -27,7 +27,7 @@ class Product{
         return $this->description;
     }
 
-    public function setProduct($arrProd){
+    protected function setProduct($arrProd){
         if(isset($arrProd["title"])){
             $this->title= $arrProd["title"];
         }

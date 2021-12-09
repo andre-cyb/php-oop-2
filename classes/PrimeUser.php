@@ -1,15 +1,19 @@
 <?php
 
+
+
 class PrimeUsers extends User{
 
-    public $shipping;
-    public $delivery;
-    public $specialOffer;
+    protected $shipping;
+    protected $delivery;
+    protected $specialOffer;
+
 
 
     function __construct($arrUser){
         parent::__construct($arrUser);
         $this->getUserPrime();
+        
         
     }
     public function getUserPrime(){
@@ -27,7 +31,7 @@ class PrimeUsers extends User{
     }
 
 
-    public function setUserPrime($arrUser){
+    protected function setUserPrime($arrUser){
         
             
             if(isset($arrUser["free-shipping"])){

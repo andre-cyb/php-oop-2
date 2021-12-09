@@ -72,9 +72,11 @@ echo "</ul>"; */
                     <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <?php echo "<h3>".$item->getTitle()."</h3>" ?>
-                            <?php echo "<small>". "$".$item->getPrice()."</small>" ?>
-                            <?php echo "<p>".$item->getDescription()."</p>" ?>
+                            <?php 
+                                echo "<h3>".$item->getTitle()."</h3>" ;
+                                echo "<small>". "$".$item->getPrice()."</small>"; 
+                                echo "<p>".$item->getDescription()."</p>" ;
+                            ?>
                         </div>
                     </div>
                 <?php
@@ -85,19 +87,26 @@ echo "</ul>"; */
             <div class="row ">
 
                 <?php 
-                    foreach ($users as $user) {
-                        $user= new User($user);
+                    foreach ($users as $utente) {
+                        $user= new User($utente);
                     /*  echo "<li>".$gardenItem->getGproduct()."</li>"; */
                     
                 ?>
                     <div class="card col-3" style="width: 18rem; background-color: #1A1A1A">
                         <!-- <img src="..." class="card-img-top" alt="..."> -->
                         <div class="card-body">
-                            <?php echo "<h3>".$user->getName()."</h3>" ?>
-                            <?php echo "<h4>".$user->getLastName()."</h4>" ?>
-                            <?php echo "<p>".$user->getAge()."</p>" ?>
-                            <?php echo "<small>".$user->getPrime()."</small>" ?>
-                            <?php echo "<small>".$user->getPaymentMethod("carta di credito")."</small>" ?>
+                            <?php 
+                                echo "<h3>".$user->getName()."</h3>" ;
+                                echo "<h4>".$user->getLastName()."</h4>"; 
+                                echo "<p>".$user->getAge()."</p>" ;
+                                echo "<small>metodo pagamento: ".$user->getPaymentMethod("carta di credito")."</small>" ;
+                                echo "<small>".$user->getPrime()."</small><br>" ;
+                                if($utente["prime"]===true){
+                                    echo "<small>". $user->getPrimePrivilege()."</small>" ;
+                                } else{
+                                    
+                                }
+                            ?>
                         </div>
                     </div>
                 <?php
